@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  a(href='/duel') Duel!
+  |   |   
+  a(href='/leaderboard') View Weresquirrel Leaderboard
+  h1 Colonies
+  each colony in colonies
+    a(href='/colony/'+colony.colony._id)
+      h3 #{colony.colony.name}
+    p Wins: #{colony.wins}
+

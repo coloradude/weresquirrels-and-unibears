@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1 Leaderboard
+  table
+    tr
+      th Name:
+      th Colony:
+      th Total Garlic: 
+      th Total Meat:
+    each squirrel in allStats
+      tr 
+        td
+          a(href='/weresquirrel/' + squirrel.weresquirrel_id) #{squirrel.name}
+        td
+          a(href='/colony/' + squirrel.colony_id) #{squirrel.colonyName}
+        td #{squirrel.totalGarlic}
+        td #{squirrel.totalMeat}

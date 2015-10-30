@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1 The winner is ... 
+    a(href='/colony/' + winner_id)
+      h1=winnerName
+  h2=colony1.name 
+    p Total Score: #{colony1.score}
+  h2=colony2.name
+    p Total Score: #{colony2.score}
+  a(href='/duel') Duel again
